@@ -13,10 +13,10 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 ENV GRADLE_VERSION 2.2.1
 WORKDIR /usr/bin
-RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
-  unzip gradle-${GRADLE_VERSION}-all.zip && \
+RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+  unzip gradle-${GRADLE_VERSION}-bin.zip && \
   ln -s gradle-${GRADLE_VERSION} gradle && \
-  rm gradle-${GRADLE_VERSION}-all.zip
+  rm gradle-${GRADLE_VERSION}-bin.zip
 
 ENV GRADLE_HOME /usr/bin/gradle
 ENV PATH $PATH:$GRADLE_HOME/bin
