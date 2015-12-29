@@ -5,7 +5,7 @@ ENV ANDROID_SDK_VERSION r24.4.1
 WORKDIR /opt
 RUN curl -sLO https://dl.google.com/android/android-sdk_${ANDROID_SDK_VERSION}-linux.tgz && \
   tar zxvf android-sdk_${ANDROID_SDK_VERSION}-linux.tgz && \
-  ln -s android-sdk_${ANDROID_SDK_VERSION}-linux android-sdk && \
+  ln -s android-sdk-linux android-sdk && \
   rm android-sdk_${ANDROID_SDK_VERSION}-linux.tgz
 
 ENV ANDROID_HOME /opt/android-sdk
