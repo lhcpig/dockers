@@ -1,7 +1,7 @@
 FROM java:8-jdk
 MAINTAINER lhcpig <lhcpig@qq.com>
 
-ENV GRADLE_VERSION 2.10
+ENV GRADLE_VERSION 2.2.1
 WORKDIR /usr/bin
 RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
   unzip gradle-${GRADLE_VERSION}-all.zip && \
@@ -23,6 +23,3 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 RUN mkdir /app
 WORKDIR /app
-
-RUN mkdir /opt/workspace
-WORKDIR /opt/workspace
