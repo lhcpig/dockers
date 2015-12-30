@@ -20,6 +20,6 @@ sudo docker run --rm -v /project/path:/app lhcpig/android
 
 If you don't want to download the dependency everytime, you can use the command:
 ```bash
-sudo docker run -v --rm ~/.gradle:/root/.gradle -v /project/path:/app lhcpig/android
+sudo docker run --rm -v ~/.gradle:/root/.gradle -v /project/path:/app lhcpig/android
 ```
 so you can cache it in the path `~/.gradle`.
