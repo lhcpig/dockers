@@ -1,6 +1,7 @@
 This docker is to build Android Gradle project with Java 8.
 
-# Version
+---
+# 1. Version
 - Java 8
 - Gradle 2.2.1
 - Android_sdk r24.4.1
@@ -9,7 +10,8 @@ This docker is to build Android Gradle project with Java 8.
 - Android_platform 22_r02
 - Android_build_tools r23.0.2
 
-# How to use
+---
+# 2. How to use
 
 just use the command:
 ```bash
