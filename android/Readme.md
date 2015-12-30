@@ -1,16 +1,23 @@
-## APK packaging env
+This docker is to build Android Gradle project with Java 8.
 
-- JAVA_VERSION 8
-- GRADLE_VERSION 2.2.1
-- ANDROID_SDK_VERSION r24.4.1
-- ANDROID_M2REPOSITORY_VERSION r25
-- ANDROID_SUPPORT_VERSION r23.1.1
-- ANDROID_PLATFORM_VERSION 22_r02
-- ANDROID_BUILD_TOOLS_VERSION r23.0.2
+# Version
+- Java 8
+- Gradle 2.2.1
+- android_sdk r24.4.1
+- android_m2repository r25
+- android_support r23.1.1
+- android_platform 22_r02
+- android_build_tools r23.0.2
 
-## How to use
-`sudo docker run -v /project/path:/app lhcpig/android`
+# How to use
+
+just use the command:
+```bash
+sudo docker run --rm -v /project/path:/app lhcpig/android
+```
 
 If you don't want to download the dependency everytime, you can use the command:
-`sudo docker run -v ~/.gradle:/root/.gradle -v /project/path:/app lhcpig/android`
+```bash
+sudo docker run -v --rm ~/.gradle:/root/.gradle -v /project/path:/app lhcpig/android
+```
 so you can cache it in the path `~/.gradle`.
