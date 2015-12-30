@@ -1,5 +1,7 @@
-FROM lhcpig/java
+FROM java:8
 MAINTAINER lhcpig <lhcpig@qq.com>
+
+RUN apt-get update && apt-get install -y gcc-multilib lib32z1 lib32stdc++6
 
 ENV ANDROID_SDK_VERSION r24.4.1
 WORKDIR /opt
