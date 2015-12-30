@@ -32,7 +32,7 @@ RUN curl -sLO https://dl.google.com/android/repository/android-${ANDROID_PLATFOR
   
 RUN mkdir -p ${ANDROID_HOME}/extras/android
 RUN curl -sLO https://dl.google.com/android/repository/android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip && \
-  unzip android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip -d ${ANDROID_HOME}/extra/android&& \
+  unzip android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip -d ${ANDROID_HOME}/extras/android&& \
   rm android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip
   
 RUN curl -sLO https://dl.google.com/android/repository/support_${ANDROID_SUPPORT_VERSION}.zip && \
