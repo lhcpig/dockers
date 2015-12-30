@@ -28,7 +28,7 @@ RUN curl -sLO https://dl.google.com/android/repository/android-${ANDROID_PLATFOR
   unzip android-${ANDROID_PLATFORM_VERSION}.zip -d ${ANDROID_HOME}/platforms&& \
   rm android-${ANDROID_PLATFORM_VERSION}.zip
   
-RUN mkdir -p ${ANDROID_HOME}/extra/android
+RUN mkdir -p ${ANDROID_HOME}/extras/android
 RUN curl -sLO https://dl.google.com/android/repository/android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip && \
   unzip android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip -d ${ANDROID_HOME}/extra/android&& \
   rm android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip
