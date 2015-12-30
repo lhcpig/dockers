@@ -42,9 +42,10 @@ RUN curl -sLO https://dl.google.com/android/repository/support_${ANDROID_SUPPORT
 #RUN curl -sLO https://dl.google.com/android/repository/platform-tools_${ANDROID_PLATFORM_TOOLS_VERSION}-linux.zip && \
 #  unzip platform-tools_${ANDROID_PLATFORM_TOOLS_VERSION}-linux.zip -d ${ANDROID_HOME} && \
 #  rm platform-tools_${ANDROID_PLATFORM_TOOLS_VERSION}-linux.zip
-  
+
+RUN mkdir -p ${ANDROID_HOME}/build-tools
 RUN curl -sLO https://dl.google.com/android/repository/build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip && \
-  unzip build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip -d ${ANDROID_HOME} && \
+  unzip build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip -d ${ANDROID_HOME}/build-tools && \
   rm build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip
 
 ENV GRADLE_HOME /usr/bin/gradle
