@@ -36,7 +36,7 @@ RUN curl -sLO https://dl.google.com/android/repository/android_m2repository_${AN
   rm android_m2repository_${ANDROID_M2REPOSITORY_VERSION}.zip
   
 RUN curl -sLO https://dl.google.com/android/repository/support_${ANDROID_SUPPORT_VERSION}.zip && \
-  unzip support_${ANDROID_SUPPORT_VERSION}.zip -d ${ANDROID_HOME}/extra/android&& \
+  unzip support_${ANDROID_SUPPORT_VERSION}.zip -d ${ANDROID_HOME}/extras/android&& \
   rm support_${ANDROID_SUPPORT_VERSION}.zip
   
 #RUN curl -sLO https://dl.google.com/android/repository/platform-tools_${ANDROID_PLATFORM_TOOLS_VERSION}-linux.zip && \
