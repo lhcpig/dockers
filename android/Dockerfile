@@ -1,4 +1,4 @@
-FROM java:8-jdk
+FROM lhcpig/java
 MAINTAINER lhcpig <lhcpig@qq.com>
 
 ENV ANDROID_SDK_VERSION r24.4.1
@@ -45,11 +45,9 @@ RUN curl -sLO https://dl.google.com/android/repository/build-tools_${ANDROID_BUI
   unzip build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip -d ${ANDROID_HOME} && \
   rm build-tools_${ANDROID_BUILD_TOOLS_VERSION}-linux.zip
 
-
-
-
 ENV GRADLE_HOME /usr/bin/gradle
 ENV PATH $PATH:$GRADLE_HOME/bin
 
 RUN mkdir /app
 WORKDIR /app
+CMD ["gradle", "build"]
