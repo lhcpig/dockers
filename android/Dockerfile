@@ -1,7 +1,7 @@
 FROM java:8
 MAINTAINER lhcpig <lhcpig@qq.com>
 
-RUN apt-get update && apt-get install -y lib32z1
+RUN apt-get update && apt-get install -y gcc-multilib lib32z1 && apt-get clean
 
 ENV ANDROID_SDK_VERSION r24.4.1
 WORKDIR /opt
