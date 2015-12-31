@@ -11,14 +11,20 @@ This docker is to build Android Gradle project with Java 8.
 - Android_build_tools r23.0.2
 
 ---
+
 # 2. How to use
 
-just use the command:
+* Just use the command:
 ```bash
 sudo docker run --rm -v /project/path:/app lhcpig/android
 ```
 
-If you don't want to download the dependency everytime, you can use the command:
+* Change directory to your project directory, than replace `/project/path` to `$(pwd) `:
+```bash
+sudo docker run --rm -v $(pwd):/app lhcpig/android
+```
+
+* If you don't want to download the dependency everytime, you can use the command:
 ```bash
 sudo docker run --rm -v ~/.gradle:/root/.gradle -v /project/path:/app lhcpig/android
 ```
