@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER lhcpig <lhcpig@qq.com>
 
 WORKDIR /
-RUN yum install -y wget
+RUN apt-get install -y unzip wget & apt-get clean & rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN wget https://github.com/letsencrypt/letsencrypt/archive/master.zip & unzip master.zip & rm -f master.zip
 
 WORKDIR /letsencrypt-master
