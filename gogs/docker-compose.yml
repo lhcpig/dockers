@@ -6,9 +6,9 @@ mysql:
 gogs:
   image: gogs/gogs
   volumes:
-    - /data/docker-data/gogs:/data
+    - /var/gogs:/data
   ports:
-    - "11002:22"
-    - "innerip:11003:3000"
+    - "10022:22"
+    - "10080:3000"
   links:
     - mysql
