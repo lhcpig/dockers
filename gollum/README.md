@@ -3,6 +3,7 @@
 ---
 #build & run
 `docker build -t gollum .`
+
 `docker run -v `pwd`:/wiki -d -p 4567:80 --name gollum gollum`
 
 ---
