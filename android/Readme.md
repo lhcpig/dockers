@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/lhcpig/android.svg)](https://microbadger.com/images/lhcpig/android "Get your own image badge on microbadger.com")
+
 This docker is to build Android Gradle project with Java 8.
 
 ---
