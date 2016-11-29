@@ -8,9 +8,9 @@ RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa && \
   chmod 0600 ~/.ssh/authorized_keys
 RUN mkdir /var/run/sshd
 
-RUN wget http://10.9.24.170/hadoop.tar.gz && \
-  tar zxvf hadoop.tar.gz && \
-  rm -rf hadoop.tar.gz
+RUN wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz && \
+  tar zxvf hadoop-2.7.3.tar.gz && \
+  rm -rf hadoop-2.7.3.tar.gz
 ENV HADOOP_HOME /hadoop-2.7.3
 ENV HADOOP_CONF_DIR="${HADOOP_HOME}/etc/hadoop"
 ENV HADOOP_LIBEXEC_DIR="${HADOOP_HOME}/libexec"
