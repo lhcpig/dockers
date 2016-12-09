@@ -14,6 +14,6 @@ sudo docker build . -t lhcpig/hdfs
 
 Just use the command:
 ```bash
-sudo docker run -it -d --name hdfs-test -p9000:9000 -p50070:50070 lhcpig/hdfs
+sudo docker run -it -d -h hdfs --name hdfs-test -p9000:9000 -p50070:50070 lhcpig/hdfs
 sudo docker exec -it hdfs-test start-dfs.sh
 ```
